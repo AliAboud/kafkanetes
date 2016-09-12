@@ -1,21 +1,22 @@
 apiVersion: v1
 kind: Template
 metadata:
-  name: ali-aboud-kafka-build-from-openjdk-7
+  name: php-project
   annotations:
     description: Kafkanetes builder
     iconClass: icon-database
-    tags: bigdata,aliaboud,messaging,kafka,zookeeper, build1
+    tags: php
 
 parameters:
 - name: SOURCE_REPOSITORY_URL
   description: The URL of the Git repository with the Kafkanetes Dockerfile
   required: true
-  value: https://github.com/aliaboud/kafkanetes.git
+  value: https://github.com/aliaboud/php.git
+  
 - name: OBJECT_NAME_PREFIX
   description: Name prefix for each object created
   required: true
-  value: aliaboudkafkajava7
+  value: aliaboudphp
 
 objects:
 - apiVersion: v1

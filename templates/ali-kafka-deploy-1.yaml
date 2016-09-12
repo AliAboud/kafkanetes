@@ -69,16 +69,16 @@ objects:
         - name: kafka-logs
           persistentVolumeClaim:
             claimName: ${OBJECT_NAME_PREFIX}
-    triggers:
-    - type: ConfigChange
-    - type: ImageChange
-      imageChangeParams:
-        automatic: false
-        containerNames:
-        - aliaboudkafkajava7
-        from:
-          kind: ImageStream
-          name: ${IMAGESTREAM}
+#    triggers:
+#    - type: ConfigChange
+#    - type: ImageChange
+#      imageChangeParams:
+#        automatic: false
+#        containerNames:
+#        - aliaboudkafkajava7
+#        from:
+#          kind: ImageStream
+#          name: ${IMAGESTREAM}
 
 - apiVersion: v1
   kind: Service
