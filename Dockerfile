@@ -29,11 +29,15 @@ ADD supervisor/kafka.conf supervisor/zookeeper.conf /etc/supervisor/conf.d/
 
 WORKDIR $KAFKA_HOME 
 
+
+
+VOLUME /tmp/kafka-logs /tmp/zookeeper
+
+
 # 2181 is zookeeper, 9092 is kafka
 EXPOSE 2181 9092 2888 3888
 
 CMD ["supervisord", "-n"]
-
 
 
 
