@@ -92,7 +92,7 @@ objects:
         - kafkanetes
         from:
           kind: ImageStream
-          name: ${IMAGESTREAM}
+          name: ${IMAGESTREAM}:latest
 
 - apiVersion: v1
   kind: DeploymentConfig
@@ -139,7 +139,7 @@ objects:
         - kafkanetes
         from:
           kind: ImageStream
-          name: ${IMAGESTREAM}
+          name: ${IMAGESTREAM}:latest
 
 - apiVersion: v1
   kind: Service
